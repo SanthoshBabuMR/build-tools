@@ -1,0 +1,4 @@
+version
+
+require - 2.1.17
+r.js	- 2.1.17

@@ -1,0 +1,6 @@
+version
+
+async	- 0.1.2
+i18n	- 2.0.4
+text	- 2.0.12
+domReady- 2.0.1
