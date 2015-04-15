@@ -94,7 +94,7 @@ h6 {
 /* code-block end */
 
 /* mark begin */
-mark {
+/*mark {
 	background: #ffffff;
 }
 mark.severe {
@@ -108,7 +108,7 @@ mark.imp {
 }
 mark.highlt {
 	color: rgba(48, 100, 231, 1);
-}
+}*/
 /* mark end */
 
 .hide {

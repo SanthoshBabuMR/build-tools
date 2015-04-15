@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Info - Gulp</title>
+        <!-- css begin -->
+        <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="/public/css/bootstrap/bootstrap-theme.css" />
+        <link rel="stylesheet" href="/public/css/render.css" />
+        <!-- css end -->
+    </head>
+    <body>
+        <!-- doc-wrap begin -->
+        <div class="doc-wrap">
+        <!-- container begin -->
+            <div class="container">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1>Info <small>Gulp</small></h1>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-default" href="../grunt/info.html">grunt info</a>
+                            <a class="btn btn-default" href="../brunch/info.html">brunch info</a>
+                            <a class="btn btn-default" href="/">Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- about gulp panel begin -->
+                      <div class="panel-heading">About Grunt</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <ul>
+                              <li>Gulp is a <mark>Stream based build system</mark></li>
+                              <li>Runs on top of Node.js</li>
+                              <li>Grunt setup based on code over configuration</li>
+                              <li>Requires <mark>package.json</mark> and <mark>gulpfile.js</mark> to be configured at the project's root directory</li>
+                              <li><mark>package.json</mark> contains project's meta data such as project name, description, author, license.
+                              It also contains the list of depenedencies needed by the project</li>
+                              <li><mark>gulpfile.js</mark> is used for requiring gulp plugins and defining tasks</li>
+                              <li>Gulp is all about streams and building complex pipelines with ease. It uses node.js’ streams, and executes faster, since it does not open/close files, or create intermediary copies all the time. </li>
+                              <li>APIs: <mark>gulp.src</mark>, <mark>gulp.desc</mark>, <mark>gulp.watch</mark> </li>
+                          </ul>
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- about gulp panel end -->
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- sample package.json panel begin -->
+                      <div class="panel-heading">Sample package.json</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <code>
+                              <pre>
+{
+  "name": "name-of-the-application",
+  "version": "0.0.0",
+  "description": "description/purpose of the application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : { 
+    "type" : "git|svn",
+    "url"  : "path-to-repo"
+  },
+  "author": "name-of-the-author",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0"
+  }
+}
+
+                              </pre>
+                          </code>                          
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- sample package.json panel end -->
+                </div>
+
+				<div class="panel panel-primary">
+                <!-- sample gulpfile.js panel begin -->
+                      <div class="panel-heading">Sample gulpfile.js</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <code>
+                              <pre>
+// require gulp plugins
+var gulp    = require('gulp'),
+    connect = require('gulp-connect');
+
+// configure task
+gulp.task('connect', function() {
+  connect.server({
+    port: 62342
+  });
+});
+ 
+// register task
+gulp.task('startServer', ['connect']);
+                              </pre>
+                          </code>                          
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- sample gulpfile.js panel end -->
+                </div>
+
+				<div class="panel panel-primary">
+                <!-- references panel begin -->
+                      <div class="panel-heading">References</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <ul class="list-group">                              
+                              <li class="list-group-item">
+                                  <a href="https://www.youtube.com/watch?v=7eoaqbEZ7G0">youtube: Getting started with gulp.js</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://www.youtube.com/playlist?list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos">youtube: Learning Gulp</a>
+                              </li>                              
+                              <li class="list-group-item">
+                                  <a href="http://www.smashingmagazine.com/2014/06/11/building-with-gulp/">smashingmagazine: Building With Gulp</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://www.sitepoint.com/introduction-gulp-js/">sitepoint: An Introduction to Gulp.js</a>
+                              </li> 
+                              <li class="list-group-item">
+                                  <a href="https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js">scotch.io: Automate Your Tasks Easily with Gulp.js</a>
+                              </li>                               
+                              <li class="list-group-item">
+                                  <a href="http://gulpjs.com/">gulpjs: Gulp Website</a>
+                              </li>                              
+                              <li class="list-group-item">
+                                  <a href="https://github.com/gulpjs">github: Github repo</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md">github: Gulp APIs</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://github.com/gulpjs/gulp/tree/master/docs/recipes">github: Gulp Recipes</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">github: Gulp getting started</a>
+                              </li>           
+                          </ul>
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- references panel end -->
+                </div>  	
+                
+            </div>
+        <!-- container end -->        
+        </div>
+        <!-- doc-wrap end -->
+
+        <!-- script begin -->
+        <!-- <script src="/public/scripts/main.js"></script> -->
+        <!-- script end -->
+    </body>
+</html>

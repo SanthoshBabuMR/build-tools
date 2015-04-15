@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Info - Grunt</title>
+        <!-- css begin -->
+        <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="/public/css/bootstrap/bootstrap-theme.css" />
+        <link rel="stylesheet" href="/public/css/render.css" />
+        <!-- css end -->
+    </head>
+    <body>
+        <!-- doc-wrap begin -->
+        <div class="doc-wrap">
+        <!-- container begin -->
+            <div class="container">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1>Info <small>Grunt</small></h1>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-default" href="../gulp/info.html">gulp info</a>
+                            <a class="btn btn-default" href="../brunch/info.html">brunch info</a>
+                            <a class="btn btn-default" href="/">Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- about grunt panel begin -->
+                      <div class="panel-heading">About Grunt</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <ul>
+                              <li>Grunt is a <mark>JavaScript Task Runner</mark></li>
+                              <li>Runs on top of Node.js</li>
+                              <li>Grunt setup based on configuration rather than code</li>
+                              <li>Requires <mark>package.json</mark> and <mark>Gruntfile.js</mark> to be configured at the project's root directory</li>
+                              <li><mark>package.json</mark> contains project's meta data such as project name, description, author, license.
+                              It also contains the list of depenedencies needed by the project</li>
+                              <li><mark>Gruntfile.js</mark> is used for defining tasks and loading grunt plugins used in configuring the task.</li>
+                              <li>Advantages include matured ecosystem with large number of plugins and an active development community.
+                              <br />The barrier to entry is relatively low because a vast range of tools and automated tasks are already available to use.</li>
+                          </ul>
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- about grunt panel end -->
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- sample package.json panel begin -->
+                      <div class="panel-heading">Sample package.json</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <code>
+                              <pre>
+{
+  "name": "name-of-the-application",
+  "version": "0.0.0",
+  "description": "description/purpose of the application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : { 
+    "type" : "git|svn",
+    "url"  : "path-to-repo"
+  },
+  "author": "name-of-the-author",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.10.1"
+  }
+}
+
+                              </pre>
+                          </code>                          
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- sample package.json panel end -->
+                </div>
+
+				<div class="panel panel-primary">
+                <!-- sample Gruntfile.js panel begin -->
+                      <div class="panel-heading">Sample Gruntfile.js</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <code>
+                              <pre>
+module.exports = function( grunt ) {
+  // configure task(s)
+  grunt.initConfig( {
+    connect: {
+      appServer: {
+        options: {
+          protocol: "https"
+          , hostname: "localhost"
+          , port: 6234
+          , base: "."
+          , keepalive: true
+        }
+      }
+    }    
+  } );
+  // load task(s)
+  grunt.loadNpmTasks( "grunt-contrib-connect" );
+  // register task(s)
+  grunt.registerTask( "appServer", "connect:appServer" );
+};
+
+
+                              </pre>
+                          </code>                          
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- sample Gruntfile.js panel end -->
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- references panel begin -->
+                      <div class="panel-heading">References</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <ul class="list-group">                              
+                              <li class="list-group-item">
+                                  <a href="https://www.youtube.com/watch?v=bntNYzCrzvE">youtube: Grunt JavaScript Automation for the Lazy Developer</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://www.smashingmagazine.com/2013/10/29/get-up-running-grunt/">smashingmagazine: Get Up And Running With Grunt</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://gruntjs.com/">gruntjs: Grunt Website</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://github.com/gruntjs/grunt">github: Github repo</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://gruntjs.com/plugins">gruntjs: Grunt plugins</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://gruntjs.com/getting-started">gruntjs: Grunt getting started</a>
+                              </li>                              
+                              <li class="list-group-item">
+                                  <a href="http://www.sitepoint.com/writing-awesome-build-script-grunt/">sitepoint: Writing an Awesome Build Script with Grunt</a>
+                              </li>                 
+                          </ul>
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- references panel end -->
+                </div>    
+                
+            </div>
+        <!-- container end -->        
+        </div>
+        <!-- doc-wrap end -->
+
+        <!-- script begin -->
+        <!-- <script src="/public/scripts/main.js"></script> -->
+        <!-- script end -->
+    </body>
+</html>

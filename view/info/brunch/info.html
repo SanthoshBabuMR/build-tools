@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Info - Brunch</title>
+        <!-- css begin -->
+        <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="/public/css/bootstrap/bootstrap-theme.css" />
+        <link rel="stylesheet" href="/public/css/render.css" />
+        <!-- css end -->
+    </head>
+    <body>
+        <!-- doc-wrap begin -->
+        <div class="doc-wrap">
+        <!-- container begin -->
+            <div class="container">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1>Info <small>Brunch</small></h1>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-default" href="../grunt/info.html">grunt info</a>
+                            <a class="btn btn-default" href="../gulp/info.html">gulp info</a>
+                            <a class="btn btn-default" href="/">Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- about grunt panel begin -->
+                      <div class="panel-heading">About Grunt</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <ul>
+                              <li>Brunch is a <mark>Build tool</mark></li>
+                              <li>Brunch is based on <mark>Convention Over Configuration</mark></li>
+                              <li>Brunch is fundamentally specialized and geared towards building assets, these files that get used in the end by your runtime platform, usually a web browser. It comes pre-equipped with a number of behaviors and features.
+	                              <ol>
+	                              	<li>Categorization of source files: JavaScript, Style sheets, Templates and 'miscellanea;'</li>
+	                              	<li><mark>Smart concatenation</mark> of these files towards one or more target files;</li>
+	                              	<li>Maintenance of all relevant <mark>source maps;</mark></li>
+	                              	<li><mark>Minification</mark> of resulting files if we're in <mark>production mode</mark>;</li>
+	                              	<li><mark>Watching</mark> of source files to update the build on the fly.</li>
+	                              </ol>
+                              </li>
+                              <li>Brunch is a <mark>pipeline</mark>, which makes of streams</li>
+                              <li>Brunch uses <mark>incremental builds.</mark></li>
+                          </ul>
+                          <ul>
+                          	<li>Brunch emphasizes the concept of <mark><a href="http://brunch.io/skeletons.html">skeleton</a></mark>, providing a <mark>kickstarter</mark> by creating a few folders, pre-requiring dependencies in <mark>package.json</mark> and providing a default Brunch configuration</li>
+                          </ul>
+                          <ul>
+                          	<li><mark>brunch-config.js</mark> (or) <mark>brunch-config.coffee</mark> is the file in which brunch configurations reside</li>
+                          	<li>Brunch comes with a built-in <mark>HTTP server</mark>, listening on <mark>3333</mark> port.</li>                          	
+                          </ul>
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- about grunt panel end -->
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- sample package.json panel begin -->
+                      <div class="panel-heading">Sample package.json</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <code>
+                              <pre>
+{
+  "name": "name-of-the-application",
+  "version": "0.0.0",
+  "description": "description/purpose of the application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : { 
+    "type" : "git|svn",
+    "url"  : "path-to-repo"
+  },
+   "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "author": "name-of-the-author",
+  "license": "ISC",
+  "dependencies": {
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "auto-reload-brunch": ">= 1.0 < 1.8"
+  }
+}
+
+                              </pre>
+                          </code>                          
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- sample package.json panel end -->
+                </div>
+
+				<div class="panel panel-primary">
+                <!-- sample Gruntfile.js panel begin -->
+                      <div class="panel-heading">Sample Gruntfile.js</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <code>
+                              <pre>
+exports.config =
+  # See http://brunch.io/#documentation for docs.
+  files:
+    javascripts:
+      joinTo: 'app.js'
+    stylesheets:
+      joinTo: 'app.css'
+    templates:
+      joinTo: 'app.js'
+  server:
+  	port: 62343
+                              </pre>
+                          </code>                          
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- sample Gruntfile.js panel end -->
+                </div>
+
+                <div class="panel panel-primary">
+                <!-- references panel begin -->
+                      <div class="panel-heading">References</div>
+                      <div class="panel-body">
+                      <!-- panel-body begin -->
+                          <ul class="list-group">                              
+                              <li class="list-group-item">
+                                  <a href="https://github.com/brunch/brunch-guide">github: Brunch Guide</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://alxhill.com/blog/articles/brunch-coffeescript-angular/">alxhill: Brunch - A build system without the Grunt-work</a>
+                              </li>                              
+                              <li class="list-group-item">
+                                  <a href="http://brunch.io/">brunch.io: Brunch website</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://brunch.io/skeletons.html">brunch.io: skeletons</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://github.com/brunch/brunch-guide-demos">github: brunch-guide-demos</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://github.com/brunch">github: Github repo</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="https://www.npmjs.com/search?q=brunch">npmjs: Brunch plugins</a>
+                              </li>
+                              <li class="list-group-item">
+                                  <a href="http://blog.jetbrains.com/webstorm/2014/06/the-brunch-build-tool/">blog.jetbrains: The Brunch Build Tool</a>
+                              </li>                              
+                          </ul>
+                    <!-- panel-body end -->
+                      </div>
+                 <!-- references panel end -->
+                </div> 	
+                
+            </div>
+        <!-- container end -->        
+        </div>
+        <!-- doc-wrap end -->
+
+        <!-- script begin -->
+        <!-- <script src="/public/scripts/main.js"></script> -->
+        <!-- script end -->
+    </body>
+</html>
